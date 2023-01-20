@@ -107,8 +107,8 @@ public static class EnemyManager
     {
         var random = new Random();
 
-        var randomInt = random.Next(Enemies.Count);
-        //var randomInt = random.Next(1);
+        //var randomInt = random.Next(Enemies.Count);
+        var randomInt = random.Next(1);
 
         if (randomInt >= 0 && randomInt < Enemies.Count) _keyEnemy = Enemies[randomInt];
     }

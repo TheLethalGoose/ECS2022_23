@@ -59,7 +59,7 @@ public static class ItemManager
         else
         {
             if (enemy.IsBoss)
-                DropRandomLoot(enemy.Position, enemy.ItemSpawnRate, 25);
+                DropRandomLoot(enemy.Position, enemy.ItemSpawnRate, 100);
             else
                 DropRandomLoot(enemy.Position, enemy.ItemSpawnRate);
         }
