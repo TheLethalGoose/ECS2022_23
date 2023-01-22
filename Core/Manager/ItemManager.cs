@@ -65,19 +65,14 @@ public static class ItemManager
         }
     }
 
-    private static void DropRandomLoot(Vector2 position, float dropChance, int umlChance = 5)
+    private static void DropRandomLoot(Vector2 position, float dropChance, int umlChance = 0)
     {
-        var randomDropChance = new Random((int) DateTime.Now.Ticks);
         var randomDrop = new Random((int) DateTime.Now.Ticks);
+        
+        var randomFloat = randomDrop.Next(0, 100);
 
-        var randomFloat = randomDropChance.Next(0, 100);
-
-        if (randomFloat >= dropChance) return;
-
-        randomFloat = randomDrop.Next(0, 100);
-
-        var weaponChance = 35;
-        var trinketChance = 15;
+        var weaponChance = 25;
+        var trinketChance = 25;
 
         if (randomFloat <= umlChance)
         {

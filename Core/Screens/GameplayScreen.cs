@@ -99,6 +99,10 @@ internal class GameplayScreen : GameScreen
             };
             LockerManager.Init(_gameSave.ItemsInLocker);
         }
+        
+        _player.EP = 15;
+        _player.Armor = 3;
+        _player.Level = 5;
 
         UiLoader.InitializeUi(_player.MaxHP);
         InventoryManager.Init(_player);
@@ -108,7 +112,7 @@ internal class GameplayScreen : GameScreen
             Zoom = 3f
         };
 
-        _escape = new Escape(_player, 3, 3);
+        _escape = new Escape(_player, 3, 1);
         _escape.AttachCamera(_camera);
         // once the load has finished, we use ResetElapsedTime to tell the game's
         // timing mechanism that we have just finished a very long frame, and that

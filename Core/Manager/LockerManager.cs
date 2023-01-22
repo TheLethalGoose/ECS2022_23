@@ -30,7 +30,14 @@ public static class LockerManager
 
         _itemsInLocker = itemsInLocker;
 
-        foreach (var itemType in itemsInLocker) _locker.AddItem(ItemLoader.CreateItem(Vector2.Zero, itemType));
+        for (int i = 2; i < 7; i++)
+        {
+            _itemsInLocker.Remove((ItemType) i );
+        }
+        _itemsInLocker.Add(ItemType.Phaser);
+        
+        foreach (var itemType in _itemsInLocker) _locker.AddItem(ItemLoader.CreateItem(Vector2.Zero, itemType));
+
     }
 
     public static void AddToPocket(Item item)
