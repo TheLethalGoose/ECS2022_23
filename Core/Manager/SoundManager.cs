@@ -21,13 +21,13 @@ public static class SoundManager
         if (Sound == null) return;
 
         SoundEffectInstance = Sound.CreateInstance();
+        SoundEffectInstance.Volume = 0.1f;
         SoundEffectInstance.IsLooped = true;
-        SoundEffectInstance.Volume = 0.5f;
         SoundEffectInstance.Play();
     }
 
     public static void Initialize()
     {
-        SoundEffect.MasterVolume = 0.8f;
+        SoundEffect.MasterVolume = 0.5f;
     }
 }

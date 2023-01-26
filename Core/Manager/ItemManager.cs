@@ -71,15 +71,15 @@ public static class ItemManager
         
         var randomFloat = randomDrop.Next(0, 100);
 
-        var weaponChance = 25;
-        var trinketChance = 25;
+        var weaponChance = 15;
+        var trinketChance = 10;
 
-        if (randomFloat <= umlChance)
+        if (umlChance != 0)
         {
             AddItem(GenerateItem(position, ItemType.UmlDiagram));
             return;
         }
-
+        
         if (randomFloat <= trinketChance)
         {
             AddItem(GenerateItem(position, ItemType.SwimmingGoggles));
